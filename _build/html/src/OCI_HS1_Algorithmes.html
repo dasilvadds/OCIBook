@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mohammed al-Khwarizmi &#8212; OCI - Introduction à Python</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Boucles en Python" href="OCI04_Boucles.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/leC.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">OCI - Introduction à Python</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="OCI01_Introduction.html">
+   Introduction à Python &amp; iPython notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OCI02_Listes.html">
+   Les listes en
+   <em>
+    Python
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OCI03_Booleans_IfBlock.html">
+   Booléens et tests
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OCI04_Boucles.html">
+   Boucles en
+   <em>
+    Python
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Mohammed al-Khwarizmi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#les-algorithmes">
+   Les algorithmes
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/src/OCI_HS1_Algorithmes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/OCI_HS1_Algorithmes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Mohammed al-Khwarizmi
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-algorithmes">
+   Les algorithmes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definitions-algorithme-programme">
+     Définitions :  Algorithme ≠ Programme
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#algorithme">
+       Algorithme
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#programme">
+       Programme
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exemple">
+       Exemple
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ingredients-de-base-des-algorithmes-en-pseudo-code">
+     Ingrédients de base des algorithmes en pseudo-code
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#donnees">
+       Données
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#instructions">
+       Instructions
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#affectations">
+         Affectations
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#instructions-de-controle">
+         Instructions de contrôle
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#exemple-que-fait-cet-algorithme">
+         Exemple : Que fait cet algorithme ?
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#que-font-les-algorithmes-suivants">
+       Que font les algorithmes suivants
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#algorithme-1">
+         Algorithme 1
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#algorithme-2">
+         Algorithme 2
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#algorithme-3">
+         Algorithme 3
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creations-d-algorithme">
+       Créations d’algorithme
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#somme-de-multiples">
+         Somme de multiples
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#comptage-de-mot">
+         Comptage de mot
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#les-deux-plus-grands">
+         Les deux plus grands
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#la-methode-al-khwarizmi">
+       La méthode al-Khwarizmi
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#implementation">
+       Implémentation
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="Mohammed al-Khwarizmi" src="../_images/al-khwarizmi.jpg" /></p>
+<div class="section" id="mohammed-al-khwarizmi">
+<h1>Mohammed al-Khwarizmi<a class="headerlink" href="#mohammed-al-khwarizmi" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>Le mot français « algorithme » provient du nom d’un savant arabe du <span class="math notranslate nohighlight">\(IX^{ème}\)</span> siècle : <strong>Mohammed al-Khwarizmi</strong> (Khiva vers 788 — vers 850 Bagdad) qui fut l’un des inventeurs de l’algèbre et du système décimal.
+C’est également grâce à lui que se diffuseront les chiffres arabes en Occident.</p>
+<p>Le premier ouvrage <em>al-Kitâb al-mukh- tasar fâ hisâb al-jabr w’al-muqâbala</em>, le Livre de l’explication du calcul de la remise en place et de la simplification, a donné son nom à l’algèbre.</p>
+<p>Al-Khwarizmi y présente une exposition complète de la résolution des équations du premier et du second degré. L’inconnue, que nous notons <code class="docutils literal notranslate"><span class="pre">x</span></code>, s’appelle la <em>racine</em> et, comme il a éliminé tout nombre négatif, il distingue six cas et les traite sur des exemples qui se généralisent sans difficulté pour toute équation de même type.</p>
+<p>Il considère ainsi :</p>
+<ul class="simple">
+<li><p>Carrés égaux aux racines, c’est-à-dire de la forme <span class="math notranslate nohighlight">\(ax^2 = bx\)</span> ;</p></li>
+<li><p>Carrés égaux à un nombre, soit <span class="math notranslate nohighlight">\(ax^2 = c\)</span> ;</p></li>
+<li><p>Racines égales à un nombre, soit <span class="math notranslate nohighlight">\(bx = c\)</span> ;</p></li>
+<li><p>Carrés et racines égaux à un nombre, soit <span class="math notranslate nohighlight">\(ax^2 + bx = c\)</span> ;</p></li>
+<li><p>Carrés et nombre égaux aux racines, soit <span class="math notranslate nohighlight">\(ax^2 + c = 6x\)</span> ;</p></li>
+<li><p>Racines et nombres égaux aux carrés, soit <span class="math notranslate nohighlight">\(bx + c = ax^2\)</span>;</p></li>
+</ul>
+<p>où <code class="docutils literal notranslate"><span class="pre">a</span></code>,<code class="docutils literal notranslate"><span class="pre">b</span></code> et <code class="docutils literal notranslate"><span class="pre">c</span></code> désignent des nombres positifs.</p>
+<p>Contrairement aux mathématicien grecs, al-Khwarizmi détaille des méthodes effectives de résolution d’équations.</p>
+<p>Historiquement liée au calcul, la notion d’algorithme s’est progressivement étendue à la manipulation de différents objets, des textes et des images par exemple.</p>
+</div>
+<div class="section" id="les-algorithmes">
+<h1>Les algorithmes<a class="headerlink" href="#les-algorithmes" title="Permalink to this headline">¶</a></h1>
+<p><strong>Un algorithme est simplement une méthode qui sert à résoudre un problème en un nombre fini d’étapes</strong> : chercher un mot dans le dictionnaire, classer des mots par ordre alphabétique, classer des nombres par ordre de grandeur, chercher le meilleur parcours possible sur une carte, trouver une racine carrée, construire des listes de nombres premiers, etc.</p>
+<p>On peut décrire un algorithme comme étant une suite d’actions à accomplir séquentiellement, dans un ordre fixé.</p>
+<div class="section" id="definitions-algorithme-programme">
+<h2>Définitions :  Algorithme ≠ Programme<a class="headerlink" href="#definitions-algorithme-programme" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="algorithme">
+<h3>Algorithme<a class="headerlink" href="#algorithme" title="Permalink to this headline">¶</a></h3>
+<p>Un algorithme est la description abstraite des étapes <em>simples</em> conduisant à la résolution d’un problème. C’est la partie conceptuelle d’un programme.</p>
+</div>
+<div class="section" id="programme">
+<h3>Programme<a class="headerlink" href="#programme" title="Permalink to this headline">¶</a></h3>
+<p>Un programme est l’implémentation d’un algorithme dans un langage donné et sur un système particulier.</p>
+</div>
+<div class="section" id="exemple">
+<h3>Exemple<a class="headerlink" href="#exemple" title="Permalink to this headline">¶</a></h3>
+<p>Décrivez ci-dessous un algorithme pour trouver le maximum d’une <em>longue</em> liste de nombres entiers :<br />
+L = (17, 23218, 543, 7, 1984, 2000000, 21, … , 3, 666, 69, 0, 42)</p>
+<p><em>Ecrire votre algorithme ici</em></p>
+</div>
+</div>
+<div class="section" id="ingredients-de-base-des-algorithmes-en-pseudo-code">
+<h2>Ingrédients de base des algorithmes en pseudo-code<a class="headerlink" href="#ingredients-de-base-des-algorithmes-en-pseudo-code" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="donnees">
+<h3>Données<a class="headerlink" href="#donnees" title="Permalink to this headline">¶</a></h3>
+<p>Elles peuvent être de 3 types:</p>
+<ol class="simple">
+<li><p>entrées</p></li>
+<li><p>sorties</p></li>
+<li><p>internes</p></li>
+</ol>
+</div>
+<div class="section" id="instructions">
+<h3>Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="affectations">
+<h4>Affectations<a class="headerlink" href="#affectations" title="Permalink to this headline">¶</a></h4>
+<p>Typiquement mettre une valeur ou un résultat dans une variable<br />
+<span class="math notranslate nohighlight">\(x \leftarrow 4\)</span><br />
+<span class="math notranslate nohighlight">\( \Delta \leftarrow b^2 - 4ac\)</span></p>
+</div>
+<div class="section" id="instructions-de-controle">
+<h4>Instructions de contrôle<a class="headerlink" href="#instructions-de-controle" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>branchements conditionnels ou test : <em>si …. alors …. sinon</em></p></li>
+<li><p>itérations ou boucles : <em>pour .. allant de .. à ..</em> ; <em>pour tous les éléments de … répéter …</em></p></li>
+<li><p>boucles conditionnelles : <em>tant que (test est vrai) répéter …</em></p></li>
+</ol>
+</div>
+<div class="section" id="exemple-que-fait-cet-algorithme">
+<h4>Exemple : Que fait cet algorithme ?<a class="headerlink" href="#exemple-que-fait-cet-algorithme" title="Permalink to this headline">¶</a></h4>
+<p><strong>Algorithme</strong><br />
+entrée : N entier positif<br />
+sortie : ??<br />
+<span class="math notranslate nohighlight">\(i \leftarrow 0 \)</span><br />
+<strong>Tant que</strong> <span class="math notranslate nohighlight">\(2^i \leq N \)</span><br />
+<span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\( i \leftarrow i + 1 \)</span><br />
+<strong>Sortir :</strong> i</p>
+<p>La sortie de cette algorithme représente le nombre de bits nécessaires pour représenter N en binaire</p>
+</div>
+</div>
+<div class="section" id="que-font-les-algorithmes-suivants">
+<h3>Que font les algorithmes suivants<a class="headerlink" href="#que-font-les-algorithmes-suivants" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="algorithme-1">
+<h4>Algorithme 1<a class="headerlink" href="#algorithme-1" title="Permalink to this headline">¶</a></h4>
+<p>entrée : a, b deux entiers naturels non nuls<br />
+sortie : ??<br />
+<span class="math notranslate nohighlight">\(x \leftarrow a\)</span><br />
+<span class="math notranslate nohighlight">\(y \leftarrow b \)</span><br />
+<span class="math notranslate nohighlight">\(z \leftarrow 0 \)</span><br />
+<strong>Tant que</strong> <span class="math notranslate nohighlight">\(y \geq 1 \)</span><br />
+<span class="math notranslate nohighlight">\(\quad\)</span> <strong>Si</strong> y est pair<br />
+<span class="math notranslate nohighlight">\(\qquad\)</span> <span class="math notranslate nohighlight">\(x \leftarrow 2x \)</span><br />
+<span class="math notranslate nohighlight">\(\qquad\)</span> <span class="math notranslate nohighlight">\(y \leftarrow y / 2\)</span><br />
+<span class="math notranslate nohighlight">\(\quad\)</span><strong>Sinon</strong><br />
+<span class="math notranslate nohighlight">\(\qquad\)</span> <span class="math notranslate nohighlight">\(z \leftarrow z + x \)</span><br />
+<span class="math notranslate nohighlight">\(\qquad\)</span> <span class="math notranslate nohighlight">\(y \leftarrow y-1 \)</span><br />
+<strong>Sortir :</strong> z</p>
+<p>Algorithme 1 :</p>
+<p><em>Note :</em> Les algorithmes existent depuis bien avant les ordinateurs! En particulier, l’algorithme ci-dessus nous vient de l’Egypte ancienne.</p>
+</div>
+<div class="section" id="algorithme-2">
+<h4>Algorithme 2<a class="headerlink" href="#algorithme-2" title="Permalink to this headline">¶</a></h4>
+<p>entrée : n entier naturel<br />
+sortie : ??<br />
+<span class="math notranslate nohighlight">\(m \leftarrow n\)</span><br />
+<span class="math notranslate nohighlight">\(i \leftarrow 1 \)</span><br />
+<strong>Tant que</strong> <span class="math notranslate nohighlight">\(m \ge 0 \)</span><br />
+<span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(i \leftarrow 2i \)</span><br />
+<span class="math notranslate nohighlight">\(\quad\)</span> <span class="math notranslate nohighlight">\(m \leftarrow m - 1\)</span><br />
+<strong>Sortir :</strong> i</p>
+<p>Algorithme 2 :</p>
+</div>
+<div class="section" id="algorithme-3">
+<h4>Algorithme 3<a class="headerlink" href="#algorithme-3" title="Permalink to this headline">¶</a></h4>
+<p>entrée : a, b deux entiers naturels non nuls<br />
+sortie : ??<br />
+<span class="math notranslate nohighlight">\(s \leftarrow 0\)</span><br />
+<strong>Si</strong> <span class="math notranslate nohighlight">\(a \le b\)</span><br />
+<span class="math notranslate nohighlight">\(\quad\)</span> <strong>Pour</strong> i allant de <span class="math notranslate nohighlight">\(1 \text{ à } a\)</span><br />
+<span class="math notranslate nohighlight">\(\qquad\)</span> <span class="math notranslate nohighlight">\(s \leftarrow s + b \)</span><br />
+<strong>Sinon</strong><br />
+<span class="math notranslate nohighlight">\(\quad\)</span> <strong>Pour</strong> i allant de <span class="math notranslate nohighlight">\(1 \text{ à } b\)</span><br />
+<span class="math notranslate nohighlight">\(\qquad\)</span> <span class="math notranslate nohighlight">\(s \leftarrow s + a \)</span><br />
+<strong>Sortir :</strong> s</p>
+<p>Algorithme 3 :</p>
+</div>
+</div>
+<div class="section" id="creations-d-algorithme">
+<h3>Créations d’algorithme<a class="headerlink" href="#creations-d-algorithme" title="Permalink to this headline">¶</a></h3>
+<p>Pour ces exercices, la syntax n’est pas primordiale, ce qui est important est de s’assurer que votre algorithme possède des entrées et des sorties, que les différentes étapes sont des opérations <em>simples</em> qui se suivent dans le bon ordre afin d’obtenir le résultat. Assurez-vous surtout que votre algorithme s’arrête bien !</p>
+<div class="section" id="somme-de-multiples">
+<h4>Somme de multiples<a class="headerlink" href="#somme-de-multiples" title="Permalink to this headline">¶</a></h4>
+<p>Écrivez un algorithme qui calcule la somme des <em>n</em> premiers nombres entiers faisant partie de la liste de multiple de 5 et de 7.<br />
+Pour n = 5, cette somme vaut 5+7+10+14+15 = 51.</p>
+<p><strong>Somme de multiples</strong> : votre algorithme ici</p>
+</div>
+<div class="section" id="comptage-de-mot">
+<h4>Comptage de mot<a class="headerlink" href="#comptage-de-mot" title="Permalink to this headline">¶</a></h4>
+<p>Soit A une chaîne de caractères formée uniquement de mots et d’espaces (uniques) entre les mots, et soit n sa longueur (exemple: <em>A</em> =”Le silence des agneaux” et donc <em>n</em> = 22). Écrivez un algorithme dont les entrées sont <em>A</em> et <em>n</em>, et dont la sortie est le nombre de mots de la chaîne (4 dans l’exemple).</p>
+<p><strong>Comptage de mot</strong> : votre algorithme ici</p>
+</div>
+<div class="section" id="les-deux-plus-grands">
+<h4>Les deux plus grands<a class="headerlink" href="#les-deux-plus-grands" title="Permalink to this headline">¶</a></h4>
+<p>Soit <em>L</em> une liste de nombres entiers positifs de taille <em>n</em> (exemple: <em>L</em> = {3,43,17,22,16} et donc <em>n</em> = 5). Ecrivez un algorithme dont l’entrée est <em>L</em> et <em>n</em>, et dont la sortie sont les deux plus grands nombres de la liste (dans l’exemple: 43 et 22).</p>
+<p><strong>Les deux plus grands</strong> : votre algorithme ici</p>
+</div>
+</div>
+<div class="section" id="la-methode-al-khwarizmi">
+<h3>La méthode al-Khwarizmi<a class="headerlink" href="#la-methode-al-khwarizmi" title="Permalink to this headline">¶</a></h3>
+<p>Voici ci-dessous l’algorithme de al-Khwarizmi pour résoudre toutes les équations du type  <span class="math notranslate nohighlight">\(x^2 + bx = c\)</span>, où <code class="docutils literal notranslate"><span class="pre">b</span></code> et <code class="docutils literal notranslate"><span class="pre">c</span></code> sont des nombres positifs.</p>
+<blockquote>
+<div><p>On prend la moitié des racines ; on la met au carré, que l’on additionne au nombre.
+Prenons alors la racine carrée de ce nombre et ôtons-lui la moitié des racines pour obtenir la solution.</p>
+</div></blockquote>
+<p><strong>Rappel</strong> : L’inconnue, que nous notons <code class="docutils literal notranslate"><span class="pre">x</span></code>, s’appelle la <em>racine</em>.</p>
+<p>Réécrivez cet algorithme en pseudo-code ci dessous:</p>
+<p><strong>Algorithme d’al-Kwharizmi</strong> : pseudo code à mettre ci-dessous</p>
+</div>
+<div class="section" id="implementation">
+<h3>Implémentation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h3>
+<p>Programmer consiste à transmettre à un ordinateur, à l’aide des instructions d’un langage, l’algorithme qu’il doit appliquer pour parvenir au résultat qu’on lui demande d’établir.</p>
+<p>Écrivez en <em>Python</em> l’implémentation des algortihmes des exercices précédents.</p>
+<p>Pour pouvoir réaliser cet exercice, il vous faut d’abord avoir vu <a class="reference internal" href="OCI04_Boucles.html"><span class="doc std std-doc">OCI04_Boucles</span></a></p>
+<p>Ce Notebook est a été crée par David Da SILVA - 2020</p>
+<p>Source: Tangente HS 37 &amp; EPFL ICC - O. Lévêque</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./src"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="OCI04_Boucles.html" title="previous page">Boucles en <em>Python</em></a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By David Da SILVA<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

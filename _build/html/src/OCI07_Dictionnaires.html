@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>10 - Dictionnaire en Python &#8212; OCI - Introduction à Python</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/leC.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">OCI - Introduction à Python</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="OCI01_Introduction.html">
+   Introduction à Python &amp; iPython notebook
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OCI02_Listes.html">
+   Les listes en
+   <em>
+    Python
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OCI03_Booleans_IfBlock.html">
+   Booléens et tests
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OCI04_Boucles.html">
+   Boucles en
+   <em>
+    Python
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OCI_HS1_Algorithmes.html">
+   Mohammed al-Khwarizmi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OCI_HS1_Algorithmes.html#les-algorithmes">
+   Les algorithmes
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/src/OCI07_Dictionnaires.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/src/OCI07_Dictionnaires.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creation-et-edition-de-dictionnaire">
+   10.1 - Création et édition de dictionnaire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#supprimer-des-cles-d-un-dictionnaire">
+   10.2 - Supprimer des clés d’un dictionnaire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-methodes-de-parcours">
+   10.3 - Les méthodes de parcours
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parcours-des-cles">
+     Parcours des clés
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercice">
+     Exercice
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parcours-des-valeurs">
+     Parcours des valeurs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parcours-des-cles-et-valeurs-simultanement">
+     Parcours des clés et valeurs simultanément
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#en-resume">
+   En résumé
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Exercice
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="dictionnaire-en-python">
+<h1>10 - Dictionnaire en <em>Python</em><a class="headerlink" href="#dictionnaire-en-python" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>Vincent Le Goff - <a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/les-dictionnaires-2">OpenClassRoom</a></p>
+<p>Les dictionnaires sont des objets pouvant en contenir d’autres, à l’instar des listes. Cependant, au lieu d’héberger des informations dans un ordre précis, ils associent chaque objet contenu à une clé (la plupart du temps, une chaîne de caractères). Par exemple, un dictionnaire peut contenir un carnet d’adresses et on accède à chaque contact en précisant son nom.</p>
+<div class="section" id="creation-et-edition-de-dictionnaire">
+<h2>10.1 - Création et édition de dictionnaire<a class="headerlink" href="#creation-et-edition-de-dictionnaire" title="Permalink to this headline">¶</a></h2>
+<p>Un dictionnaire est un type de données extrêmement puissant et pratique. Il se rapproche des listes sur certains points mais, sur beaucoup d’autres, il en diffère totalement.
+Les objets de ce type sont des objets conteneurs, dans lesquels on trouve d’autres objets. Pour accéder à ces objets contenus, il faut connaître leur position dans la liste. Cette position se traduit par des entiers, appelés indices, compris entre 0 (inclus) et la taille de la liste (non incluse).
+Le dictionnaire est aussi un objet conteneur. Il n’a quant à lui aucune structure ordonnée, à la différence des listes. De plus, pour accéder aux objets contenus dans le dictionnaire, on n’utilise pas nécessairement des indices mais des clés qui peuvent être de bien des types distincts.</p>
+<p>Voici la première méthode d’instanciation d’un dictionnaire :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">mon_dictionnaire</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">mon_dictionnaire</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">mon_dictionnaire</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Les parenthèses délimitent les tuples, les crochets délimitent les listes et les accolades <code class="docutils literal notranslate"><span class="pre">{}</span></code> délimitent les dictionnaires. Par conséquent, la seconde méthode d’instanciation d’un dictionnaire est évidemment :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">mon_dictionnaire</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">mon_dictionnaire</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Voici comment ajouter des clés et valeurs dans notre dictionnaire vide :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">mon_dictionnaire</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">mon_dictionnaire</span><span class="p">[</span><span class="s2">&quot;pseudo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Prolixe&quot;</span>
+<span class="n">mon_dictionnaire</span><span class="p">[</span><span class="s2">&quot;mot de passe&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;*&quot;</span>
+<span class="n">mon_dictionnaire</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La clé à laquelle nous souhaitons accéder est indiquée entre crochets.
+Si la clé n’existe pas, elle est ajoutée au dictionnaire avec la valeur spécifiée après le signe <code class="docutils literal notranslate"><span class="pre">=</span></code>.
+Sinon, l’ancienne valeur à l’emplacement indiqué est remplacée par la nouvelle :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">mon_dictionnaire</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">mon_dictionnaire</span><span class="p">[</span><span class="s2">&quot;pseudo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Prolixe&quot;</span>
+<span class="n">mon_dictionnaire</span><span class="p">[</span><span class="s2">&quot;mot de passe&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;*&quot;</span>
+<span class="n">mon_dictionnaire</span><span class="p">[</span><span class="s2">&quot;pseudo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;6pri1&quot;</span>
+<span class="n">mon_dictionnaire</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>C’est assez similaire à la création de variables : si la variable n’existe pas, elle est créée, sinon elle est remplacée par la nouvelle valeur.</p>
+<p>Pour accéder à la valeur d’une clé précise, c’est très simple :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">mon_dictionnaire</span><span class="p">[</span><span class="s2">&quot;mot de passe&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Si la clé n’existe pas dans le dictionnaire, une exception de type KeyError sera levée.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">mon_dictionnaire</span><span class="p">[</span><span class="s2">&quot;toto&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>On peut aussi créer des dictionnaires déjà remplis.
+On précise entre accolades la clé, le signe deux points <strong><code class="docutils literal notranslate"><span class="pre">:</span></code></strong> et la valeur correspondante. On sépare les différents couples clé : valeur par une virgule. C’est d’ailleurs comme cela que Python vous affiche un dictionnaire quand vous le lui demandez.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">placard</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;chemise&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;pantalon&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;tee-shirt&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span>
+<span class="n">placard</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Généralisons un peu tout cela : nous avons des dictionnaires, qui peuvent contenir d’autres objets. On place ces objets et on y accède grâce à des clés. Un dictionnaire ne peut naturellement pas contenir deux clés identiques (comme on l’a vu, la seconde valeur écrase la première). En revanche, rien n’empêche d’avoir deux valeurs identiques dans le dictionnaire.</p>
+<p>Nous avons utilisé ici, pour nos clés et nos valeurs, des chaînes de caractères. Ce n’est absolument pas obligatoire. Comme avec les listes, vous pouvez utiliser des entiers comme clés :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">mon_dictionnaire</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">mon_dictionnaire</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span>
+<span class="n">mon_dictionnaire</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;e&quot;</span>
+<span class="n">mon_dictionnaire</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;i&quot;</span>
+<span class="n">mon_dictionnaire</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span>
+<span class="n">mon_dictionnaire</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;u&quot;</span>
+<span class="n">mon_dictionnaire</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span>
+<span class="n">mon_dictionnaire</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>On a l’impression de recréer le fonctionnement d’une liste mais ce n’est pas le cas : rappelez-vous qu’un dictionnaire n’a pas de structure ordonnée. Si vous supprimez par exemple l’indice 2, le dictionnaire, contrairement aux listes, ne va pas décaler toutes les clés d’indice supérieur à l’indice supprimé. Il n’a pas été conçu pour.</p>
+<p><strong>On peut utiliser quasiment tous les types comme clés et on peut utiliser absolument tous les types comme valeurs.</strong></p>
+</div>
+<div class="section" id="supprimer-des-cles-d-un-dictionnaire">
+<h2>10.2 - Supprimer des clés d’un dictionnaire<a class="headerlink" href="#supprimer-des-cles-d-un-dictionnaire" title="Permalink to this headline">¶</a></h2>
+<p>Comme pour les listes, vous avez deux possibilités mais elles reviennent sensiblement au même :</p>
+<ul class="simple">
+<li><p>le mot-clé <code class="docutils literal notranslate"><span class="pre">del</span></code></p></li>
+<li><p>la méthode de dictionnaire <code class="docutils literal notranslate"><span class="pre">pop</span></code></p></li>
+</ul>
+<p>Ils fonctionnent pratiquement dde la même manière que pour les listes, i.e. la méthode <code class="docutils literal notranslate"><span class="pre">pop</span></code> renvoie la valeur de la clé supprimée :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">placard</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;chemise&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;pantalon&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;tee shirt&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span>
+<span class="k">del</span> <span class="n">placard</span><span class="p">[</span><span class="s2">&quot;chemise&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">placard</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;chemise&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;pantalon&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;tee shirt&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span>
+<span class="n">placard</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;chemise&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="les-methodes-de-parcours">
+<h2>10.3 - Les méthodes de parcours<a class="headerlink" href="#les-methodes-de-parcours" title="Permalink to this headline">¶</a></h2>
+<p>Comme vous pouvez le penser, le parcours d’un dictionnaire ne s’effectue pas tout à fait comme celui d’une liste. La différence n’est pas si énorme que cela mais, la plupart du temps, on passe par des méthodes de dictionnaire.</p>
+<div class="section" id="parcours-des-cles">
+<h3>Parcours des clés<a class="headerlink" href="#parcours-des-cles" title="Permalink to this headline">¶</a></h3>
+<p>On peut parcourir un dictionnaire comme on l’a fait pour les listes :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pommes&quot;</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;melons&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;poires&quot;</span><span class="p">:</span><span class="mi">31</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Comme vous le voyez, si on parcour un dictionnaire <em>simplement</em>, on parcourt en réalité la liste des clés contenues dans le dictionnaire.</p>
+<p><strong>Attention : Les dictionnaires n’ont pas de structure ordonnée, par conséquent les clés ne s’affichent pas dans l’ordre dans lequel on les a entrées</strong>.</p>
+<p>La méthode <code class="docutils literal notranslate"><span class="pre">keys</span></code> (<em>clés</em> en anglais) renvoie la liste des clés contenues dans le dictionnaire et permet de parcourir le dictionnaire de la même manière (la lecture de l’instruction est juste plus explicite).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">fruits</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercice">
+<h3>Exercice<a class="headerlink" href="#exercice" title="Permalink to this headline">¶</a></h3>
+<p>En utilisant la méthode <code class="docutils literal notranslate"><span class="pre">sort</span></code> qui trie les <code class="docutils literal notranslate"><span class="pre">list</span></code>, réalisez un parcours ordonné des clés de votre dictionnaire.</p>
+</div>
+<div class="section" id="parcours-des-valeurs">
+<h3>Parcours des valeurs<a class="headerlink" href="#parcours-des-valeurs" title="Permalink to this headline">¶</a></h3>
+<p>On peut aussi parcourir les valeurs contenues dans un dictionnaire. Pour ce faire, on utilise la méthode <code class="docutils literal notranslate"><span class="pre">values</span></code> ( <em>valeurs</em> en anglais).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pommes&quot;</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;melons&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;poires&quot;</span><span class="p">:</span><span class="mi">31</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">fruits</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Cette méthode est peu utilisée pour un parcours car il est plus pratique de parcourir la liste des clés, cela suffit pour avoir les valeurs correspondantes. Mais on peut aussi, bien entendu, l’utiliser dans une condition :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">21</span> <span class="ow">in</span> <span class="n">fruits</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Un des fruits se trouve en quantité 21.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="parcours-des-cles-et-valeurs-simultanement">
+<h3>Parcours des clés et valeurs simultanément<a class="headerlink" href="#parcours-des-cles-et-valeurs-simultanement" title="Permalink to this headline">¶</a></h3>
+<p>Pour avoir en même temps les indices et les objets d’une liste, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">enumerate</span></code>.
+Pour faire de même avec les dictionnaires, on utilise la méthode <code class="docutils literal notranslate"><span class="pre">items</span></code>.
+Elle renvoie une liste, contenant les couples <code class="docutils literal notranslate"><span class="pre">clé</span> <span class="pre">:</span> <span class="pre">valeur</span></code>, sous la forme d’un tuple.
+Voici comment l’utiliser :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pommes&quot;</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;melons&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;poires&quot;</span><span class="p">:</span><span class="mi">31</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">cle</span><span class="p">,</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">fruits</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La clé </span><span class="si">{}</span><span class="s2"> contient la valeur </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cle</span><span class="p">,</span> <span class="n">valeur</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="en-resume">
+<h2>En résumé<a class="headerlink" href="#en-resume" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Un dictionnaire est un objet conteneur associant des clés à des valeurs.</p></li>
+<li><p>Pour créer un dictionnaire, on utilise la syntaxe <code class="docutils literal notranslate"><span class="pre">dictionnaire</span> <span class="pre">=</span> <span class="pre">{cle1:valeur1,</span> <span class="pre">cle2:valeur2,</span> <span class="pre">cleN:valeurN}</span></code>.</p></li>
+<li><p>On peut ajouter ou remplacer un élément dans un dictionnaire : <code class="docutils literal notranslate"><span class="pre">dictionnaire[cle]</span> <span class="pre">=</span> <span class="pre">valeur</span></code>.</p></li>
+<li><p>On peut supprimer une clé (et sa valeur correspondante) d’un dictionnaire en utilisant, au choix, le mot-clé <code class="docutils literal notranslate"><span class="pre">del</span></code> ou la méthode <code class="docutils literal notranslate"><span class="pre">pop</span></code>.</p></li>
+<li><p>On peut parcourir un dictionnaire grâce aux méthodes <code class="docutils literal notranslate"><span class="pre">keys</span></code> (parcourt les clés), <code class="docutils literal notranslate"><span class="pre">values</span></code> (parcourt les valeurs) ou <code class="docutils literal notranslate"><span class="pre">items</span></code> (parcourt les couples clé-valeur).</p></li>
+</ul>
+<div class="section" id="id1">
+<h3>Exercice<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Vous possédez un stock de fruits qui est répertorié dans le dictionnaire <code class="docutils literal notranslate"><span class="pre">fruits</span></code> ci-dessus.</p>
+<p>Créez un dictionnaire <code class="docutils literal notranslate"><span class="pre">prix</span></code> qui contiendra les prix unitaires des fruits que vous avez en stock avec les valeurs suivantes :</p>
+<ul class="simple">
+<li><p>pommes : 0.75</p></li>
+<li><p>melons : 3.5</p></li>
+<li><p>poires : 1</p></li>
+</ul>
+<p>Écrivez une fonction qui parcourt vos 2 dictionnaires et affiche pour chaque fruit, son nom, son prix et sa quantité en stock sous la forme suivante:</p>
+<blockquote>
+<div><p>Pommes</p>
+</div></blockquote>
+<blockquote>
+<div><p>Prix : 0.75 CHF</p>
+</div></blockquote>
+<blockquote>
+<div><p>Stock : 21</p>
+</div></blockquote>
+<p>Écrivez une fonction qui calcule et affiche le chiffre d’affaire potentiel dans le cas ou vous vendriez tous vos fruits.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python2",
+            path: "./src"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python2'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By David Da SILVA<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

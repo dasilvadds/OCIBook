@@ -1,12 +1,17 @@
 #######################################################################################
 # Book settings
-title : OCI - Introduction à Python
+title : OCIBook
 author: David Da SILVA
 logo: 'leC.png'
 
 # Information about where the book exists on the web
 description: >-
-  Une introduction au langage Python pour le cours d'Option Complémentaire Informatique au gymnase.
+  Une introduction au langage Python
+
+#######################################################################################
+# MyST parsing settings
+parse:
+  myst_extended_syntax: true
 
 #######################################################################################
 # Execution settings
@@ -23,15 +28,20 @@ html:
 notebook_interface            : "notebook"
 
 #######################################################################################
+# Information about where the book exists on the web
+repository:
+  url                       : https://github.com/dasilvadds/OCIBook # Online location of your book
+  path_to_book              : _build/html  # Optional path to your book, relative to the repository root
+  branch                    : main  # Which branch of the repository should be used when creating links (optional)
+
 # Launch button settings
-#repository:
-#  url                         : https://github.com/executablebooks/quantecon-mini-example
-#  path_to_book                : "mini_book"
-#
+launch_buttons:
+  notebook_interface: "classic" # or "jupyterlab"
+
 #binder:
-#  binderhub_url               : "https://mybinder.org"
-#  text                        : "Launch binder"
-#
+  binderhub_url               : "https://mybinder.org"
+  text                        : "Launch binder"
+
 latex:
   latex_engine                : "xelatex"
   latex_documents:

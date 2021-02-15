@@ -1,8 +1,35 @@
-# - file: README
-- file: src/index
-  sections:
-    - file: src/OCI01_Introduction
-    - file: src/OCI02_Listes
-    - file: src/OCI03_Booleans_IfBlock
-    - file: src/OCI04_Boucles
-    - file: src/OCI_HS1_Algorithmes
+# Table of content
+#
+
+- file: src/intro
+
+- part: Les bases du langage
+  numbered: false
+  chapters:
+  - file: src/OCI01_Introduction
+  - file: src/OCI02_Listes
+  - file: src/OCI03_Booleans_IfBlock
+  - file: src/OCI04_Boucles
+  - file: src/OCI05_Turtle
+  - file: src/OCI06_Fonctions
+  - file: src/OCI07_Dictionnaires
+  - file: src/OCI08_Modules
+  - file: src/OCI09_Fichiers
+  - file: src/OCI10_Matplotlib
+  - file: src/OCI11_Objets
+  - file: src/OCI12_Methodes_Speciales
+
+
+- part: Les Hors-Série 
+  numbered: false
+  chapters:
+  - file: src/OCI_HS1_Algorithmes
+  - file: src/OCI_HS2_Crypto101
+
+- part: Pour s'exercer 
+  numbered: false
+  chapters:
+  - file: src/Devoirs_NB3
+  - file: src/Devoirs_NB6_Fonctions
+  - file: src/MAN01
+

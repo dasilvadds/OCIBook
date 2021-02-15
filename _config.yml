@@ -10,13 +10,14 @@ description: >-
 
 #######################################################################################
 # MyST parsing settings
-parse:
-  myst_extended_syntax: true
+#parse:
+#  myst_extended_syntax: true
 
 #######################################################################################
 # Execution settings
 execute:
-  execute_notebooks           : cache
+  execute_notebooks           : auto
+    #execute_notebooks           : cache
 
 #######################################################################################
 # HTML-specific settings
@@ -40,6 +41,22 @@ html:
 sphinx:
   config:
     html_show_copyright: false
+    language: fr
+    html_theme: sphinx_book_theme
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    html_favicon: python.ico
+    myst_enable_extensions:
+      - amsmath
+      - colon_fence
+      - deflist
+      - dollarmath
+      - html_admonition
+      - html_image
+      - linkify
+      - replacements
+      - smartquotes
+      - substitution
+
 
 # #######################################################################################
 # Interact link settings
